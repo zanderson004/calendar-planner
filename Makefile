@@ -14,7 +14,7 @@ VERSION := -std=c++17
 MAIN := src/main.cpp
 
 # Source Files
-SOURCES := $(wildcard src/**/*.cpp)
+SOURCES := $(wildcard src/**/*.cpp) include/catch.cpp
 
 # Object Files
 OBJECTS := $(SOURCES:.cpp=.o)
@@ -23,7 +23,7 @@ OBJECTS := $(SOURCES:.cpp=.o)
 EXECUTABLE := app.exe
 
 # Test Source Files
-TEST_SOURCES := $(wildcard test/*.cpp) $(wildcard test/unit_tests/**/*.cpp)
+TEST_SOURCES := $(shell find test -name '*.cpp')
 
 # Test Object Files
 TEST_OBJECTS := $(TEST_SOURCES:.cpp=.o)
@@ -38,13 +38,13 @@ test: $(TEST_EXECUTABLES)
 %.exe: %.cpp $(OBJECTS)
 	$(COMPILER) $(FLAGS) $(INCLUDES) $(VERSION) $< $(OBJECTS) -o $@
 
-$(EXECUTABLE): $(OBJECTS)
-	$(COMPILER) $(FLAGS) $(INCLUDES) $(VERSION) $(OBJECTS) -o $(EXECUTABLE)
+$(EXECUTABLE): $(OBJECTS) $(MAIN)
+	$(COMPILER) $(FLAGS) $(INCLUDES) $(VERSION) $(OBJECTS) $(MAIN) -o $(EXECUTABLE)
 
 %.o: %.cpp
 	$(COMPILER) $(FLAGS) $(INCLUDES) $(VERSION) -c $< -o $@
 
 clean:
-	rm -f $(OBJECTS) $(TEST_OBJECTS) $(EXECUTABLE)
+	rm -f $(OBJECTS) $(TEST_OBJECTS) $(EXECUTABLE) $(TEST_EXECUTABLES)
 
 .PHONY: all test clean

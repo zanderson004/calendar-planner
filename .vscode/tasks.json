@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building the C++ project using Make."
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"],
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}
