@@ -2,7 +2,7 @@
 COMPILER := g++
 
 # Flags
-FLAGS := -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Werror
+FLAGS := -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Werror -g
 
 # Include Directory
 INCLUDES := -I ./include
@@ -14,13 +14,16 @@ VERSION := -std=c++17
 MAIN := src/main.cpp
 
 # Source Files
-SOURCES := $(wildcard src/**/*.cpp) include/catch.cpp
+SOURCES := $(wildcard src/**/*.cpp)
 
 # Object Files
 OBJECTS := $(SOURCES:.cpp=.o)
 
 # Executable
 EXECUTABLE := app.exe
+
+# Debug Executable
+DEBUG_EXECUTABLE := debug_app.exe
 
 # Test Source Files
 TEST_SOURCES := $(shell find test -name '*.cpp')
@@ -35,16 +38,21 @@ all: $(EXECUTABLE)
 
 test: $(TEST_EXECUTABLES)
 
-%.exe: %.cpp $(OBJECTS)
-	$(COMPILER) $(FLAGS) $(INCLUDES) $(VERSION) $< $(OBJECTS) -o $@
+debug: $(DEBUG_EXECUTABLE)
+
+%.exe: %.cpp $(OBJECTS) include/catch.o
+	$(COMPILER) $(FLAGS) $(INCLUDES) $(VERSION) include/catch.o $< $(OBJECTS) -o $@
 
 $(EXECUTABLE): $(OBJECTS) $(MAIN)
 	$(COMPILER) $(FLAGS) $(INCLUDES) $(VERSION) $(OBJECTS) $(MAIN) -o $(EXECUTABLE)
+
+$(DEBUG_EXECUTABLE): $(OBJECTS) $(MAIN)
+	$(COMPILER) $(FLAGS) $(INCLUDES) $(VERSION) $(OBJECTS) $(MAIN) -o $(DEBUG_EXECUTABLE)
 
 %.o: %.cpp
 	$(COMPILER) $(FLAGS) $(INCLUDES) $(VERSION) -c $< -o $@
 
 clean:
-	rm -f $(OBJECTS) $(TEST_OBJECTS) $(EXECUTABLE) $(TEST_EXECUTABLES)
+	rm -f $(OBJECTS) $(TEST_OBJECTS) $(EXECUTABLE) $(DEBUG_EXECUTABLE) $(TEST_EXECUTABLES) include/catch.o
 
-.PHONY: all test clean
+.PHONY: all test clean debug

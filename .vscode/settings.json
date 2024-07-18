@@ -1,3 +1,6 @@
 {
-    "testMate.cpp.test.executables": "test/**/*"
+    "testMate.cpp.test.executables": "test/**/*",
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }

@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/app.out",
+            "program": "${workspaceFolder}/debug_app.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -19,8 +19,8 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build",
-            "miDebuggerPath": "/usr/bin/gdb", // Adjust the path to gdb if necessary
+            "preLaunchTask": "build debug",
+            "miDebuggerPath": "/usr/bin/gdb",
             "logging": {
                 "trace": true,
                 "traceResponse": true,
