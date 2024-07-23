@@ -1,6 +1,10 @@
 {
     "testMate.cpp.test.executables": "test/**/*",
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "string": "cpp",
+        "fstream": "cpp",
+        "iosfwd": "cpp"
     }
 }
