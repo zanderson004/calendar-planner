@@ -5,7 +5,8 @@ int Task::m_idCounter = 0;
 Task::Task(std::string name, std::string description, std::unique_ptr<IDateTime> dueDateTime):
     m_name(std::move(name)), m_id(m_idCounter++), m_description(std::move(description)), m_dueDateTime(std::move(dueDateTime)) {}
 
-Task::Task(std::string name, std::unique_ptr<IDateTime> dueDateTime): Task(name, "", std::move(dueDateTime)) {}
+Task::Task(std::string name, std::unique_ptr<IDateTime> dueDateTime):
+    Task(std::move(name), "", std::move(dueDateTime)) {}
 
 const std::string& Task::getName() const {
     return m_name;
