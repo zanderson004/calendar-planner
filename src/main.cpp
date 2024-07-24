@@ -34,7 +34,7 @@ void saveTasks(const vector<Task>& tasks) {
     saveFile.close();
 }
 
-vector<Task> readTasks() {
+vector<Task> loadTasks() {
     ifstream saveFile;
     saveFile.open("tasks.txt");
     string line;
@@ -48,14 +48,43 @@ vector<Task> readTasks() {
     return res;
 }
 
-int main() {
-    // vector<Task> tasks;
-    // tasks.emplace_back("name", "desc", make_unique<DateTime>(30));
-    // saveTasks(tasks);
+Task addTask() {
+    string name, desc, hours;
 
-    vector<Task> tasks = readTasks();
-    for (auto& task : tasks) {
-        cout << task.getName() << " " << task.getDescription() << " " << to_string(task.getDueDateTime().getTime()) << "\n";
+    cout << "Enter name: ";
+    cin >> name;
+    cout << "Enter description: ";
+    cin >> desc;
+    cout << "Enter hours until due: ";
+    cin >> hours;
+    return Task{name, desc, make_unique<DateTime>(time(nullptr) + stoi(hours) * 60 * 60)};
+}
+
+#include "entities/Scheduler.hpp"
+
+int main() {
+    string cmd;
+    vector<Task> tasks;
+    Scheduler s;
+
+    while (true) {
+        cout << "Enter command: ";
+        cin >> cmd;
+        if (cmd == "exit") break;
+        else if (cmd == "task") {
+            tasks.push_back(addTask());
+            s.addTask(tasks.back());
+        }
+        else if (cmd == "save") saveTasks(tasks);
+        else if (cmd == "load") {
+            tasks = loadTasks();
+            s = Scheduler{};
+            for (auto& task : tasks) s.addTask(task);
+        }
+        else if (cmd == "get") {
+            const ITask& temp = s.getNextTask();
+            cout << temp.getName() << " " << temp.getDescription() << " " << temp.getDueDateTime().toString() << endl;
+        }
     }
 }
 
