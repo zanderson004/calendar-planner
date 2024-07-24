@@ -63,6 +63,7 @@ Task addTask() {
 #include "entities/Scheduler.hpp"
 
 int main() {
+    srand(time(nullptr));
     string cmd;
     vector<Task> tasks;
     Scheduler s;
@@ -84,6 +85,9 @@ int main() {
         else if (cmd == "get") {
             const ITask& temp = s.getNextTask();
             cout << temp.getName() << " " << temp.getDescription() << " " << temp.getDueDateTime().toString() << endl;
+        }
+        else if (cmd == "print") {
+            for (auto& task : tasks) cout << task.getName() << " " << task.getDescription() << " " << task.getDueDateTime().toString() << endl;
         }
     }
 }

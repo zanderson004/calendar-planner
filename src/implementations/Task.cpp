@@ -36,6 +36,9 @@ Task& Task::operator=(Task&& other) noexcept {
     return *this;
 }
 
+Task::Task(const Task& oth):
+    m_name(std::move(oth.m_name)), m_id(oth.m_id), m_description(std::move(oth.m_description)), m_dueDateTime(std::move(oth.m_dueDateTime)) {}
+
 const std::string& Task::getName() const {
     return m_name;
 }
