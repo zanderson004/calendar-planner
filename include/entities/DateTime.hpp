@@ -14,6 +14,7 @@ class DateTime : public IDateTime {
         DateTime(int unixTime);
 
         const std::string toString() const override;
-        int getTime() const override;
         void setTime(int unixTime) override;
+        int getTime() const override;
+        std::unique_ptr<IDateTime> clone() const override;
 };

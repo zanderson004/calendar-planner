@@ -5,8 +5,36 @@ int Task::m_idCounter = 0;
 Task::Task(std::string name, std::string description, std::unique_ptr<IDateTime> dueDateTime):
     m_name(std::move(name)), m_id(m_idCounter++), m_description(std::move(description)), m_dueDateTime(std::move(dueDateTime)) {}
 
-Task::Task(std::string name, std::unique_ptr<IDateTime> dueDateTime):
-    Task(std::move(name), "", std::move(dueDateTime)) {}
+Task::Task(std::string name, std::unique_ptr<IDateTime> dueDateTime): Task(std::move(name), "", std::move(dueDateTime)) {}
+
+Task::Task(const Task& other):
+    Task(other.m_name, other.m_description, other.m_dueDateTime->clone()) {}
+
+Task::Task(Task&& other) noexcept:
+    m_name(std::move(other.m_name)), m_id(other.m_id), m_description(std::move(other.m_description)), m_dueDateTime(std::move(other.m_dueDateTime)) {
+        other.m_id = -1;
+    }
+
+Task& Task::operator=(const Task& other) {
+    if (this != &other) {
+        m_name = other.m_name;
+        m_id = m_idCounter++;
+        m_description = other.m_description;
+        m_dueDateTime = other.m_dueDateTime->clone();
+    }
+    return *this;
+}
+
+Task& Task::operator=(Task&& other) noexcept {
+    if (this != &other) {
+        m_name = std::move(other.m_name);
+        m_id = other.m_id;
+        other.m_id = -1;
+        m_description = std::move(other.m_description);
+        m_dueDateTime = std::move(other.m_dueDateTime);
+    }
+    return *this;
+}
 
 const std::string& Task::getName() const {
     return m_name;
@@ -32,6 +60,6 @@ const IDateTime& Task::getDueDateTime() const {
     return *m_dueDateTime;
 }
 
-void Task::setDueDateTime(std::unique_ptr<IDateTime> dueDateTime) {
-    m_dueDateTime = std::move(dueDateTime);
+void Task::setDueDateTime(int unixTime) {
+    m_dueDateTime->setTime(unixTime);
 }

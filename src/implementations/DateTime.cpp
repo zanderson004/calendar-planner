@@ -14,10 +14,14 @@ const std::string DateTime::toString() const {
     return formattedTime;
 }
 
+void DateTime::setTime(int unixTime) {
+    m_unixTime = unixTime;
+}
+
 int DateTime::getTime() const {
     return m_unixTime;
 }
 
-void DateTime::setTime(int unixTime) {
-    m_unixTime = unixTime;
+std::unique_ptr<IDateTime> DateTime::clone() const {
+    return std::make_unique<DateTime>(*this);
 }

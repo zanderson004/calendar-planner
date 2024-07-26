@@ -36,6 +36,6 @@ class ITask {
         virtual const IDateTime& getDueDateTime() const = 0;
 
         /// @brief Sets the due date and time of a task
-        /// @param dueDateTime New due date and time
-        virtual void setDueDateTime(std::unique_ptr<IDateTime> dueDateTime) = 0;
+        /// @param unixTime Seconds since 00:00:00 UTC 1/1/1970
+        virtual void setDueDateTime(int unixTime) = 0;
 };

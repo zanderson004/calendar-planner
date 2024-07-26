@@ -33,11 +33,32 @@ class Task : public ITask {
         /// @param unixTime Seconds since since 00:00:00 UTC 1/1/1970 at which the task is due
         Task(std::string name, std::unique_ptr<IDateTime> dueDateTime);
 
+        /// @brief Default destructor included for rule of 5
+        ~Task() = default;
+
+        /// @brief Copy constructor deep copies the IDateTime pointer
+        /// @param other Existing object
+        Task(const Task& other);
+
+        /// @brief Move constructor
+        /// @param other Existing object
+        Task(Task&& other) noexcept;
+
+        /// @brief Copy assignment operator deep copies the IDateTime pointer
+        /// @param other Existing object
+        /// @return Result of assignment expression
+        Task& operator=(const Task& other); 
+
+        /// @brief Move assignment operator
+        /// @param other Existing object
+        /// @return Result of assignment expression
+        Task& operator=(Task&& other) noexcept;
+
         const std::string& getName() const override;
         void setName(std::string name) override;
         const std::string getId() const override;
         const std::string& getDescription() const override;
         void setDescription(std::string description) override;
         const IDateTime& getDueDateTime() const override;
-        void setDueDateTime(std::unique_ptr<IDateTime> dueDateTime) override;
+        void setDueDateTime(int unixTime) override;
 };
