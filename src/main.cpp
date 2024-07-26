@@ -27,7 +27,7 @@ vector<string> split(const string& s, char delimiter) {
 
 void saveTasks(const vector<Task>& tasks) {
     ofstream saveFile;
-    saveFile.open("tasks.txt");
+    saveFile.open("tasks.txt", std::ofstream::out | std::ofstream::trunc);
     for (auto& task : tasks) {
         saveFile << task.getName() << ";" << task.getDescription() << ";" << to_string(task.getDueDateTime().getTime()) << "\n";
     }
@@ -65,32 +65,33 @@ Task addTask() {
 int main() {
     srand(time(nullptr));
     string cmd;
-    vector<Task> tasks;
+    vector<Task> tasks = loadTasks();
     Scheduler s;
+    for (auto& task : tasks) s.addTask(task);
 
     while (true) {
         cout << "Enter command: ";
         cin >> cmd;
-        if (cmd == "exit") break;
+        if (cmd == "exit") {
+            saveTasks(tasks);
+            break;
+        }
         else if (cmd == "task") {
             tasks.push_back(addTask());
             s.addTask(tasks.back());
         }
-        else if (cmd == "save") saveTasks(tasks);
-        else if (cmd == "load") {
-            tasks = loadTasks();
-            s = Scheduler{};
-            for (auto& task : tasks) s.addTask(task);
-        }
         else if (cmd == "get") {
             const ITask& temp = s.getNextTask();
-            cout << temp.getName() << " " << temp.getDescription() << " " << temp.getDueDateTime().toString() << endl;
+            cout << temp.getName() << " " << temp.getDescription() << " " << temp.getDueDateTime().toString() << "\n";
         }
         else if (cmd == "print") {
-            for (auto& task : tasks) cout << task.getName() << " " << task.getDescription() << " " << task.getDueDateTime().toString() << endl;
+            for (auto& task : tasks) cout << task.getId() << " " << task.getName() << " " << task.getDescription() << " " << task.getDueDateTime().toString() << "\n";
         }
+        else if (cmd == "del") {
+            cout << "Enter id: ";
+        }
+        else cout << "Wrong command" << endl;
     }
 }
 
-// Task copy constructor? and check others
 // vector<Task> tasks{Task("name", "desc", make_unique<DateTime>(30))};
