@@ -63,9 +63,13 @@ Task addTask() {
 #include "entities/Scheduler.hpp"
 
 int main() {
-    srand(time(nullptr));
+    // Check static casts
+    // Vector reallocation, need to either reserve or use unique ptrs
+    srand(static_cast<unsigned int>(time(nullptr)));
     string cmd;
-    vector<Task> tasks = loadTasks();
+    vector<Task> tasks, temp1 = loadTasks();
+    tasks.reserve(100);
+    for (auto& task : temp1) tasks.push_back(std::move(task));
     Scheduler s;
     for (auto& task : tasks) s.addTask(task);
 
@@ -93,5 +97,3 @@ int main() {
         else cout << "Wrong command" << endl;
     }
 }
-
-// vector<Task> tasks{Task("name", "desc", make_unique<DateTime>(30))};

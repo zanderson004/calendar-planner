@@ -10,8 +10,7 @@ double Scheduler::weighting(const ITask& task) const {
 
 void Scheduler::addTask(const ITask& task) {
     std::string id = task.getId();
-    m_tasks.emplace(id, std::cref(task));
-
+    m_tasks.emplace(id, task);
 }
 
 void Scheduler::removeTask(std::string taskId) {
@@ -41,6 +40,6 @@ const ITask& Scheduler::getNextTask() const {
     // Choose task
     double randVal = static_cast<double>(rand()) / RAND_MAX;
     auto probabilityIterator = std::lower_bound(probabilities.begin(), probabilities.end(), randVal);
-    int index = probabilityIterator - probabilities.begin();
-    return tasks[index];
+    size_t index = static_cast<size_t>(probabilityIterator - probabilities.begin());
+    return tasks[index].get();
 }
