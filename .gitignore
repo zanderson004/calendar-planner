@@ -31,4 +31,7 @@
 *.out
 *.app
 *.dSYM
+
+# Save data
 tasks.txt
+config.txt
