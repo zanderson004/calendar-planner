@@ -10,7 +10,7 @@ double Scheduler::weighting(const ITask& task) const {
 
 void Scheduler::addTask(const ITask& task) {
     std::string id = task.getId();
-    m_tasks.emplace(id, task);
+    m_tasks.emplace(id, std::cref(task));
 }
 
 void Scheduler::removeTask(std::string taskId) {

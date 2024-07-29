@@ -63,13 +63,12 @@ Task addTask() {
 #include "entities/Scheduler.hpp"
 
 int main() {
-    // Check static casts
     // Vector reallocation, need to either reserve or use unique ptrs
     srand(static_cast<unsigned int>(time(nullptr)));
     string cmd;
-    vector<Task> tasks, temp1 = loadTasks();
+    vector<Task> tasks, loaded = loadTasks();
     tasks.reserve(100);
-    for (auto& task : temp1) tasks.push_back(std::move(task));
+    for (auto& task : loaded) tasks.push_back(move(task));
     Scheduler s;
     for (auto& task : tasks) s.addTask(task);
 
@@ -97,3 +96,6 @@ int main() {
         else cout << "Wrong command" << endl;
     }
 }
+
+// Add weekly tasks quickly
+// Am I ahead or behind schedule?
