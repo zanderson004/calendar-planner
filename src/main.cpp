@@ -79,11 +79,36 @@ void deleteTask(Scheduler& s, vector<unique_ptr<Task>>& tasks) {
     else cout << "Task deleted.\n";
 }
 
+void loadConfig(vector<unique_ptr<Task>>& tasks) {
+    fstream lastRunFile;
+    lastRunFile.open("lastRun.txt", std::ofstream::out | std::ofstream::trunc);
+    string lastRunTime;
+    lastRunFile >> lastRunTime;
+    int lastRunTime = stoi(lastRunTime);
+    lastRunFile << to_string(time(nullptr));
+    lastRunFile.close();
+
+    ifstream configFile;
+    configFile.open("config.txt");
+    string line;
+    vector<unique_ptr<Task>> res;
+
+    // map days to tasks in sorted order by their start time
+    // iterate day by day and add all tasks starting on that day, edge cases for begin and end days
+    while (getline(configFile, line)) {
+        if (line.size() == 0) continue;
+        vector<string> params = split(line, ';');
+        res.emplace_back(make_unique<Task>(params[0], params[1], make_unique<DateTime>(stoi(params[2]))));
+    }
+    configFile.close();
+}
+
 int main() {
     // Vector reallocation, need to either reserve or use unique ptrs
     srand(static_cast<unsigned int>(time(nullptr)));
     string cmd;
     vector<unique_ptr<Task>> tasks = loadTasks();
+    loadConfig(tasks);
     Scheduler s;
     for (auto& task : tasks) s.addTask(*task);
 
@@ -124,8 +149,9 @@ int main() {
 // Add estimated hours I have per week
     // config file x hours per day
 
+// Topological task requirements eg task1 -> task2
+
 // Am I ahead or behind schedule?
     // print x hours required to be on schedule for the week
     // based on hours remaining in week + estimated durations
-
-// Topological task requirements eg task1 -> task2
+    // 9;9;2;11;8;0;0
