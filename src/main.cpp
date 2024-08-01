@@ -80,32 +80,57 @@ void deleteTask(Scheduler& s, vector<unique_ptr<Task>>& tasks) {
 }
 
 #include <map>
+#include <exception>
+
+const unordered_map<string, string> dayMap {
+    {"Mon", "0"},
+    {"Tue", "1"},
+    {"Wed", "2"},
+    {"Thu", "3"},
+    {"Fri", "4"},
+    {"Sat", "5"},
+    {"Sun", "6"}
+};
 
 void loadConfig(vector<unique_ptr<Task>>& tasks) {
+    // Consider edge case where small delay makes difference
+    // Store last task instead of time
+    // Stored time is has already been processed, is not inclusive of what needs to be added
     fstream lastRunFile;
     lastRunFile.open("lastRun.txt", std::ofstream::out | std::ofstream::trunc);
-    string lastRunTime;
-    lastRunFile >> lastRunTime;
-    int lastRunTime = stoi(lastRunTime);
-    lastRunFile << to_string(time(nullptr));
+    string lastRunTimeString;
+    lastRunFile >> lastRunTimeString;
+    time_t lastRunTime = stoi(lastRunTimeString);
+    time_t currTime = time(nullptr);
+    lastRunFile << to_string(currTime);
     lastRunFile.close();
 
     // Week day then time to due day, time
-    map<int, map<int, array<int, 3>>>;
+    map<string, string> configuredTasks;
 
     ifstream configFile;
     configFile.open("config.txt");
     string line;
-    vector<unique_ptr<Task>> res;
 
     // map days to tasks in sorted order by their start time
     // iterate day by day and add all tasks starting on that day, edge cases for begin and end days
     while (getline(configFile, line)) {
         if (line.size() == 0) continue;
         vector<string> params = split(line, ';');
-        res.emplace_back(make_unique<Task>(params[0], params[1], make_unique<DateTime>(stoi(params[2]))));
+        if (params.size() != 6) throw runtime_error("Incorrect config file");
+        string name = params[0], duration = params[1], startDay = params[2], startTime = params[3], endDay = params[4], endTime = params[5];
+        configuredTasks[dayMap.at(startDay) + startTime] = name + ";" + duration + ";" + dayMap.at(endDay) + endTime;
     }
     configFile.close();
+
+    // Insert new tasks
+    tm* time_info = localtime(&lastRunTime);
+    string start = to_string(time_info->tm_wday) + to_string(time_info->tm_hour) + to_string(time_info->tm_min);
+    auto it = configuredTasks.upper_bound(start);
+    DateTime dtsd
+    while () {
+
+    }
 }
 
 int main() {
