@@ -158,7 +158,7 @@ void loadConfig(vector<unique_ptr<Task>>& tasks) {
                 dt.setTime(static_cast<int>(testTime2));
                 time_info2 = *localtime(&testTime2);
             }
-            tasks.push_back(make_unique<Task>(taskTime[0], "(" + taskTime[1] + " hours)", make_unique<DateTime>(dt.getTime())));
+            tasks.push_back(make_unique<Task>(taskTime[0], "(" + taskTime[1] + " hr)", make_unique<DateTime>(dt.getTime())));
             dt.setTime(static_cast<int>(resetTime));
 
         }
