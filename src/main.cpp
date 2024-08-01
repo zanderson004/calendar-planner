@@ -51,11 +51,12 @@ vector<unique_ptr<Task>> loadTasks() {
 Task addTask() {
     string name, desc, hours;
     cout << "Enter name: ";
-    cin >> name;
+    cin.ignore();
+    getline(cin, name);
     cout << "Enter description: ";
-    cin >> desc;
+    getline(cin, desc);
     cout << "Enter hours until due: ";
-    cin >> hours;
+    getline(cin, hours);
     return Task{name, desc, make_unique<DateTime>(time(nullptr) + stoi(hours) * 60 * 60)};
 }
 
