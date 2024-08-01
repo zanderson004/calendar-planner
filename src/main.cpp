@@ -193,7 +193,7 @@ int main() {
                 continue;
             }
             const ITask& temp = s.getNextTask();
-            cout << temp.getId() << " " temp.getName() << " " << temp.getDescription() << " " << temp.getDueDateTime().toString() << "\n";
+            cout << temp.getId() << " " << temp.getName() << " " << temp.getDescription() << " " << temp.getDueDateTime().toString() << "\n";
         }
         else if (cmd == "print") {
             for (auto& task : tasks) cout << task->getId() << " " << task->getName() << " " << task->getDescription() << " " << task->getDueDateTime().toString() << "\n";
