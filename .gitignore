@@ -36,3 +36,5 @@
 tasks.txt
 config.txt
 lastrun.txt
+
+.DS_Store
