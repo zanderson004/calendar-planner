@@ -8,6 +8,7 @@ Physics Extras;1;Wed;0900;Mon;2100
  
 DSP Workshop 1 + Quiz;2;Thu;1100;Fri;1600
 DSP Workshop 2 + Quiz;2;Fri;1600;Mon;1400
+DSP Workshop Revision;1;Mon;0900;Wed;2100
 DSP Tutorial;1;Mon;1400;Wed;2100
 DSP Tutorial Revision;1;Mon;1400;Wed;2100
 DSP Course Notes;1;Mon;1400;Wed;2100
