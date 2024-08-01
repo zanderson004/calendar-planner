@@ -13,7 +13,7 @@ DateTime::DateTime(int year, int month, int day, int hour, int minute) {
     timeinfo.tm_mday = day;
     timeinfo.tm_hour = hour;
     timeinfo.tm_min = minute;
-    DateTime(std::mktime(&timeinfo));
+    DateTime(static_cast<int>(std::mktime(&timeinfo)));
 }
 
 const std::string DateTime::toString() const {
@@ -26,6 +26,16 @@ const std::string DateTime::toString() const {
 
 void DateTime::setTime(int unixTime) {
     m_unixTime = unixTime;
+}
+
+void DateTime::setTime(int year, int month, int day, int hour, int minute) {
+    std::tm timeinfo = {};
+    timeinfo.tm_year = year - 1900;
+    timeinfo.tm_mon = month - 1;
+    timeinfo.tm_mday = day;
+    timeinfo.tm_hour = hour;
+    timeinfo.tm_min = minute;
+    m_unixTime = static_cast<int>(std::mktime(&timeinfo));
 }
 
 int DateTime::getTime() const {

@@ -17,6 +17,14 @@ class IDateTime {
         /// @param unixTime Seconds since 00:00:00 UTC 1/1/1970
         virtual void setTime(int unixTime) = 0;
 
+        /// @brief Sets the time value with specified parameters
+        /// @param year Year value
+        /// @param month Month from (1 - 12)
+        /// @param day Day (1 - 31)
+        /// @param hour Hour (0 - 23)
+        /// @param minute Minute (0 - 59)
+        virtual void setTime(int year, int month, int day, int hour, int minute) = 0;
+
         /// @brief Gets the time value
         /// @return Seconds since 00:00:00 UTC 1/1/1970
         virtual int getTime() const = 0;

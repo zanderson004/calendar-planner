@@ -23,6 +23,7 @@ class DateTime : public IDateTime {
 
         const std::string toString() const override;
         void setTime(int unixTime) override;
+        void setTime(int year, int month, int day, int hour, int minute) override;
         int getTime() const override;
         std::unique_ptr<IDateTime> clone() const override;
 };

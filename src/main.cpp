@@ -27,7 +27,7 @@ vector<string> split(const string& s, char delimiter) {
 
 void saveTasks(const vector<unique_ptr<Task>>& tasks) {
     ofstream saveFile;
-    saveFile.open("tasks.txt", std::ofstream::out | std::ofstream::trunc);
+    saveFile.open("tasks.txt");
     for (auto& task : tasks) {
         saveFile << task->getName() << ";" << task->getDescription() << ";" << to_string(task->getDueDateTime().getTime()) << "\n";
     }
@@ -96,17 +96,21 @@ void loadConfig(vector<unique_ptr<Task>>& tasks) {
     // Consider edge case where small delay makes difference
     // Store last task instead of time
     // Stored time is has already been processed, is not inclusive of what needs to be added
-    fstream lastRunFile;
-    lastRunFile.open("lastRun.txt", std::ofstream::out | std::ofstream::trunc);
+    ifstream lastRunFile;
+    lastRunFile.open("lastrun.txt");
     string lastRunTimeString;
     lastRunFile >> lastRunTimeString;
-    time_t lastRunTime = stoi(lastRunTimeString);
-    time_t currTime = time(nullptr);
-    lastRunFile << to_string(currTime);
     lastRunFile.close();
 
+    ofstream lastRunFile2;
+    lastRunFile2.open("lastrun.txt");
+    time_t lastRunTime = stoi(lastRunTimeString);
+    time_t currTime = time(nullptr);
+    lastRunFile2 << to_string(currTime);
+    lastRunFile2.close();
+
     // Week day then time to due day, time
-    map<string, string> configuredTasks;
+    multimap<string, string> configuredTasks;
 
     ifstream configFile;
     configFile.open("config.txt");
@@ -115,21 +119,51 @@ void loadConfig(vector<unique_ptr<Task>>& tasks) {
     // map days to tasks in sorted order by their start time
     // iterate day by day and add all tasks starting on that day, edge cases for begin and end days
     while (getline(configFile, line)) {
-        if (line.size() == 0) continue;
+        if (line.size() == 1) continue;
         vector<string> params = split(line, ';');
         if (params.size() != 6) throw runtime_error("Incorrect config file");
         string name = params[0], duration = params[1], startDay = params[2], startTime = params[3], endDay = params[4], endTime = params[5];
-        configuredTasks[dayMap.at(startDay) + startTime] = name + ";" + duration + ";" + dayMap.at(endDay) + endTime;
+        configuredTasks.emplace(dayMap.at(startDay) + startTime, name + ";" + duration + ";" + dayMap.at(endDay) + endTime);
     }
     configFile.close();
 
     // Insert new tasks
-    tm* time_info = localtime(&lastRunTime);
-    string start = to_string(time_info->tm_wday) + to_string(time_info->tm_hour) + to_string(time_info->tm_min);
+    tm time_info = *localtime(&lastRunTime);
+    string tempHour = to_string(time_info.tm_hour), tempMin = to_string(time_info.tm_min);
+    if (tempHour.size() == 1) tempHour = "0" + tempHour;
+    if (tempMin.size() == 1) tempMin = "0" + tempMin;
+    string start = to_string((time_info.tm_wday+6)%7) + tempHour + tempMin;
     auto it = configuredTasks.upper_bound(start);
-    DateTime dtsd
-    while () {
+    if (it == configuredTasks.end()) it = configuredTasks.begin();
+    DateTime dt(static_cast<int>(mktime(&time_info)));
+    while (dt.getTime() <= currTime) {
+        vector<string> taskTime = split(it->second, ';');
+        int tday1 = stoi(it->first.substr(0, 1)), thour1 = stoi(it->first.substr(1, 2)), tminute1 = stoi(it->first.substr(3, 2));
+        int tday = stoi(taskTime[2].substr(0, 1)), thour = stoi(taskTime[2].substr(1, 2)), tminute = stoi(taskTime[2].substr(3, 2));
+        dt.setTime(time_info.tm_year + 1900, time_info.tm_mon + 1, time_info.tm_mday, thour1, tminute1);
+        time_t testTime = dt.getTime();
+        time_info = *localtime(&testTime);
+        while ((time_info.tm_wday+6)%7 != tday1) {
+            testTime += 60 * 60 * 24;
+            dt.setTime(static_cast<int>(testTime));
+            time_info = *localtime(&testTime);
+        }
+        if (dt.getTime() <= currTime) {
+            time_t resetTime = dt.getTime();
+            dt.setTime(time_info.tm_year + 1900, time_info.tm_mon + 1, time_info.tm_mday, thour, tminute);
+            time_t testTime2 = dt.getTime();
+            tm time_info2 = *localtime(&testTime2);
+            while ((time_info2.tm_wday+6)%7 != tday) {
+                testTime2 += 60 * 60 * 24;
+                dt.setTime(static_cast<int>(testTime2));
+                time_info2 = *localtime(&testTime2);
+            }
+            tasks.push_back(make_unique<Task>(taskTime[0], taskTime[1], make_unique<DateTime>(dt.getTime())));
+            dt.setTime(static_cast<int>(resetTime));
 
+        }
+        it++;
+        if (it == configuredTasks.end()) it = configuredTasks.begin();
     }
 }
 
@@ -171,11 +205,6 @@ int main() {
     }
 }
 
-// Add weekly tasks automatically
-    // config file
-    // specify task name, estimated duration, datetime to add to scheduler, due datetime
-    // will need to store when app was last used so new tasks are automatically scheduled upon launch
-
 // Add estimated hours I have per week
     // config file x hours per day
 
@@ -185,3 +214,5 @@ int main() {
     // print x hours required to be on schedule for the week
     // based on hours remaining in week + estimated durations
     // 9;9;2;11;8;0;0
+
+// clean up static casts
