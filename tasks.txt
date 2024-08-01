@@ -1,0 +1,27 @@
+Vector Calculus & Electromagnetics Extras;1;1722598200
+Digital Electronics Lecture + Exercises;2;1722339000
+Digital Electronics Workshop Revision;1;1722483000
+Digital Electronics Extras;1;1722598200
+Statistics & Numerical Methods Lectures + Course Notes;1;1722317400
+Statistics & Numerical Methods Practical/Workshop Revision;1;1722425400
+Statistics & Numerical Methods Extras;1;1722598200
+Vector Calculus & Electromagnetics Tutorial;1;1722231000
+Vector Calculus & Electromagnetics Tutorial Revision;1;1722231000
+Vector Calculus & Electromagnetics Workshop Revision;1;1722231000
+DSP Tutorial;1;1722425400
+DSP Tutorial Revision;1;1722425400
+DSP Course Notes;1;1722425400
+DSP Practice Questions;1;1722425400
+DSP Extras;1;1722425400
+Vector Calculus & Electromagnetics Workshop 1;2;1722565800
+Statistics & Numerical Methods Seminar;1;1722511800
+Statistics & Numerical Methods Practical/Workshop;1;1722565800
+Statistics & Numerical Methods Mobius Quiz;1;1722583800
+Statistics & Numerical Methods Assignments;1;1722598200
+Digital Electronics Practice Questions;2;1722483000
+Physics Extras;1;1722857400
+Physics Lecture 1;1;1722472200
+Physics Lecture 2;1;1722558600
+DSP Workshop 1 + Quiz;2;1722580200
+Digital Electronics Workshop;2;1722598200
+Digital Electronics Quiz;1;1722598200
