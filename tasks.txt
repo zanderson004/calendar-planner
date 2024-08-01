@@ -1,6 +1,6 @@
 Vector Calculus & Electromagnetics Extras;1;1722598200
 Digital Electronics Quiz;1;1722598200
-Digital Electronics Workshop Revision;1;1722483000
+DSP Workshop 1 + Quiz;2;1722580200
 Digital Electronics Extras;1;1722598200
 Statistics & Numerical Methods Lectures + Course Notes;1;1722317400
 Statistics & Numerical Methods Practical/Workshop Revision;1;1722425400
@@ -22,4 +22,3 @@ Digital Electronics Practice Questions;2;1722483000
 Physics Extras;1;1722857400
 Physics Lecture 1;1;1722472200
 Physics Lecture 2;1;1722558600
-DSP Workshop 1 + Quiz;2;1722580200

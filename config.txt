@@ -36,4 +36,3 @@ Statistics & Numerical Methods Practical/Workshop Revision;1;Mon;0900;Wed;2100
 Statistics & Numerical Methods Mobius Quiz;1;Tue;1500;Fri;1700
 Statistics & Numerical Methods Assignments;1;Tue;1500;Fri;2100
 Statistics & Numerical Methods Extras;1;Mon;0900;Fri;2100
-test;1;Thu;2124;Fri;2100

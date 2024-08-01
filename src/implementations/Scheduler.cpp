@@ -4,7 +4,8 @@
 #include <algorithm>
 
 double Scheduler::weighting(const ITask& task) const {
-    double timeDiff = static_cast<double>(task.getDueDateTime().getTime() - time(nullptr));
+    double timeDiff = static_cast<double>(task.getDueDateTime().getTime()) - static_cast<double>(time(nullptr));
+    if (timeDiff < 0) return static_cast<double>(time(nullptr)) - static_cast<double>(task.getDueDateTime().getTime());
     return 1.0 / timeDiff;
 }
 
