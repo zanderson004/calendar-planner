@@ -79,6 +79,8 @@ void deleteTask(Scheduler& s, vector<unique_ptr<Task>>& tasks) {
     else cout << "Task deleted.\n";
 }
 
+#include <map>
+
 void loadConfig(vector<unique_ptr<Task>>& tasks) {
     fstream lastRunFile;
     lastRunFile.open("lastRun.txt", std::ofstream::out | std::ofstream::trunc);
@@ -87,6 +89,9 @@ void loadConfig(vector<unique_ptr<Task>>& tasks) {
     int lastRunTime = stoi(lastRunTime);
     lastRunFile << to_string(time(nullptr));
     lastRunFile.close();
+
+    // Week day then time to due day, time
+    map<int, map<int, array<int, 3>>>;
 
     ifstream configFile;
     configFile.open("config.txt");
