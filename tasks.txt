@@ -1,5 +1,5 @@
 Vector Calculus & Electromagnetics Extras;1;1722598200
-Digital Electronics Quiz;1;1722598200
+Statistics & Numerical Methods Practical/Workshop;1;1722565800
 Digital Electronics Practice Questions;2;1722483000
 Digital Electronics Extras;1;1722598200
 DSP Workshop Review;(1 hr);1722514644
@@ -15,5 +15,4 @@ Statistics & Numerical Methods Assignments;1;1722598200
 DSP Extras;1;1722425400
 Vector Calculus & Electromagnetics Workshop 1;2;1722565800
 Statistics & Numerical Methods Seminar;1;1722511800
-Statistics & Numerical Methods Practical/Workshop;1;1722565800
-Statistics & Numerical Methods Mobius Quiz;1;1722583800
+Physics Lecture 3;(1 hr);1722609000
