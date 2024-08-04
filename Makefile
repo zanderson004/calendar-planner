@@ -2,7 +2,7 @@
 COMPILER := g++
 
 # Flags
-FLAGS := -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Werror -g
+FLAGS := -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Werror -Wconversion -g
 
 # Include Directory
 INCLUDES := -I ./include
