@@ -56,3 +56,6 @@ clean:
 	rm -f $(OBJECTS) $(TEST_OBJECTS) $(EXECUTABLE) $(DEBUG_EXECUTABLE) $(TEST_EXECUTABLES) include/catch.o
 
 .PHONY: all test clean debug
+
+# Add separate debug and testing support in makefile
+# Separate directory for external libraries
