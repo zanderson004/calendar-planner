@@ -11,17 +11,17 @@ DSP Workshop 1 + Quiz;2;Thu;1100;Fri;1600
 DSP Workshop 2 + Quiz;2;Fri;1600;Fri;2100
 DSP Workshop Revision;1;Mon;0900;Wed;2100
 DSP Tutorial;1;Mon;1400;Wed;2100
-DSP Tutorial Revision;1;Mon;1400;Wed;2100
-DSP Course Notes;1;Mon;1400;Wed;2100
-DSP Practice Questions;1;Mon;1400;Wed;2100
-DSP Extras;1;Mon;1400;Wed;2100
+DSP Tutorial Revision;1;Mon;0900;Wed;2100
+DSP Course Notes;1;Mon;0900;Wed;2100
+DSP Practice Questions;1;Mon;0900;Wed;2100
+DSP Extras;1;Mon;0900;Wed;2100
  
 Vector Calculus & Electromagnetics Workshop 1;2;Mon;1500;Fri;1200
 Vector Calculus & Electromagnetics Workshop 2;1;Fri;1200;Fri;2000
 Vector Calculus & Electromagnetics Quiz;1;Fri;1300;Fri;2100
 Vector Calculus & Electromagnetics Tutorial;1;Mon;1000;Mon;1500
 Vector Calculus & Electromagnetics Tutorial Revision;1;Mon;1000;Mon;1500
-Vector Calculus & Electromagnetics Workshop Revision;1;Mon;1000;Mon;1500
+Vector Calculus & Electromagnetics Workshop Revision;1;Mon;0900;Fri;1200
 Vector Calculus & Electromagnetics Extras;1;Mon;0900;Fri;2100
  
 Digital Electronics Lecture + Exercises;2;Mon;0900;Tue;2100
@@ -33,7 +33,7 @@ Digital Electronics Extras;1;Mon;0900;Fri;2100
  
 Statistics & Numerical Methods Lectures + Course Notes;1;Mon;0900;Tue;1500
 Statistics & Numerical Methods Seminar;1;Tue;1500;Thu;2100
-Statistics & Numerical Methods Practical/Workshop;1;Tue;1500;Fri;1200
+Statistics & Numerical Methods Practical/Workshop;1;Mon;0900;Fri;1700
 Statistics & Numerical Methods Practical/Workshop Revision;1;Fri;1700;Wed;2100
 Statistics & Numerical Methods Mobius Quiz;1;Tue;1500;Fri;1700
 Statistics & Numerical Methods Assignments;1;Mon;1700;Fri;2100

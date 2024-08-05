@@ -202,6 +202,24 @@ int main() {
         else if (cmd == "del") {
             deleteTask(s, tasks);
         }
+        else if (cmd == "edit") {
+            string id;
+            cout << "Enter id: ";
+            cin >> id;
+            bool sentinel = false;
+            for (auto& task : tasks) {
+                if (task->getId() == id) {
+                    string hrs;
+                    cout << "Enter new hours until due: ";
+                    cin >> hrs;
+                    task->setDueDateTime(static_cast<int>(time(nullptr) + stoi(hrs) * 60 * 60));
+                    sentinel = true;
+                    break;
+                }
+            }
+            if (sentinel) cout << "Success\n";
+            else cout << "No task found\n";
+        }
         else cout << "Wrong command" << endl;
     }
 }
