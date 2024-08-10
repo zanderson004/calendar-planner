@@ -1,19 +1,12 @@
 Digital Electronics Practice Questions;(2 hr);1723087800
 Vector Calculus & Electromagnetics Extras;(1 hr);1723203000
-DSP Workshop 1 + Quiz;(2 hr);1723183200
-Digital Electronics Workshop Revision;(1 hr);1723087800
+Physics Lecture 3;(1 hr);1723201200
+Physics Pre Workshop;(1 hr);1723462200
 Digital Electronics Extras;(1 hr);1723203000
 Physics Extras;(1 hr);1723462200
 Statistics & Numerical Methods Extras;(1 hr);1723203000
-Vector Calculus & Electromagnetics Workshop Revision;(1 hr);1723028170
+Physics Workshop Review;(1 hr);1723591800
 Statistics & Numerical Methods Practical/Workshop Revision;(1 hr);1723635000
 Vector Calculus & Electromagnetics Workshop 2;(1 hr);1723199400
-Physics Lecture 2;(1 hr);1723161600
-Vector Calculus & Electromagnetics Quiz;(1 hr);1723203000
 DSP Extras;(1 hr);1723030200
-Vector Calculus & Electromagnetics Workshop 1;(2 hr);1723170600
 Statistics & Numerical Methods Assignments;(1 hr);1723203000
-Physics Workshop Review;(1 hr);1723591800
-DSP Workshop 2 + Quiz;(2 hr);1723203000
-Physics Pre Workshop;(1 hr);1723462200
-Physics Lecture 3;(1 hr);1723201200
