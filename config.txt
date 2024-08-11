@@ -34,7 +34,7 @@ Digital Electronics Extras;1;Mon;0900;Fri;2100
 Statistics & Numerical Methods Lectures + Course Notes;1;Mon;0900;Tue;1500
 Statistics & Numerical Methods Seminar;1;Tue;1500;Thu;2100
 Statistics & Numerical Methods Practical/Workshop;1;Mon;0900;Fri;1700
-Statistics & Numerical Methods Practical/Workshop Revision;1;Fri;1700;Wed;2100
+Statistics & Numerical Methods Workshop Revision;1;Fri;1700;Wed;2100
 Statistics & Numerical Methods Mobius Quiz;1;Tue;1500;Fri;1700
 Statistics & Numerical Methods Assignments;1;Mon;1700;Fri;2100
 Statistics & Numerical Methods Extras;1;Mon;0900;Fri;2100
