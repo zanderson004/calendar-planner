@@ -1,8 +1,8 @@
-Statistics & Numerical Methods Assignments;(1 hr);1723203000
+Statistics & Numerical Methods Mobius Quiz;(1 hr);1723793400
 Vector Calculus & Electromagnetics Extras;(1 hr);1723203000
 Vector Calculus & Electromagnetics Workshop 2;(1 hr);1723199400
 Statistics & Numerical Methods Assignments;(1 hr);1723807800
-DSP Extras;(1 hr);1723030200
+Statistics & Numerical Methods Seminar;(1 hr);1723721400
 Physics Extras;(1 hr);1723462200
 Statistics & Numerical Methods Extras;(1 hr);1723203000
 DSP Workshop Revision;(1 hr);1723635000
