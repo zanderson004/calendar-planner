@@ -120,7 +120,7 @@ void loadConfig(vector<unique_ptr<Task>>& tasks) {
     // map days to tasks in sorted order by their start time
     // iterate day by day and add all tasks starting on that day, edge cases for begin and end days
     while (getline(configFile, line)) {
-        if (line.size() == 1) continue;
+        if (line.size() == 0) continue;
         vector<string> params = split(line, ';');
         if (params.size() != 6) throw runtime_error("Incorrect config file");
         string name = params[0], duration = params[1], startDay = params[2], startTime = params[3], endDay = params[4], endTime = params[5];
