@@ -235,3 +235,7 @@ int main() {
     // 9;9;2;11;8;0;0
 
 // clean up static casts
+
+// track time spent on each tasks
+// use standard deviation to calculate outliers to automatically calculate task length
+// track whether above or behind required hours per week per day
