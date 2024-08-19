@@ -1,11 +1,11 @@
-Vector Calculus & Electromagnetics Quiz;(1 hr);1723807800
+DSP Tutorial;(1 hr);1724239800
 Statistics & Numerical Methods Extras;(1 hr);1723807800
 Physics Workshop Review;(1 hr);1724196600
 Statistics & Numerical Methods Assignments;(1 hr);1723807800
 Vector Calculus & Electromagnetics Workshop 2;(1 hr);1723804200
 Statistics & Numerical Methods Practical/Workshop;(1 hr);1723793400
-Physics Extras;(1 hr);1724067000
-Physics Pre Workshop;(1 hr);1724067000
+Vector Calculus & Electromagnetics Workshop 1;(2 hr);1724380200
+Statistics & Numerical Methods Assignments;(1 hr);1724412600
 Digital Electronics Extras;(1 hr);1723807800
 Statistics & Numerical Methods Workshop Revision;(1 hr);1724239800
 DSP Workshop Revision;(1 hr);1724239800
@@ -21,3 +21,5 @@ Digital Electronics Extras;(1 hr);1724412600
 Statistics & Numerical Methods Lectures + Course Notes;(1 hr);1724131800
 Statistics & Numerical Methods Practical/Workshop;(1 hr);1724398200
 Statistics & Numerical Methods Extras;(1 hr);1724412600
+Vector Calculus & Electromagnetics Tutorial;(1 hr);1724239800
+Vector Calculus & Electromagnetics Tutorial Revision;(1 hr);1724380200
