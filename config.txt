@@ -24,7 +24,8 @@ Vector Calculus & Electromagnetics Tutorial Revision;1;Mon;1000;Fri;1200
 Vector Calculus & Electromagnetics Workshop Revision;1;Mon;0900;Fri;1200
 Vector Calculus & Electromagnetics Extras;1;Mon;0900;Fri;2100
 
-Digital Electronics Lecture + Exercises;2;Mon;0900;Tue;2100
+Digital Electronics Lecture;2;Mon;0900;Tue;2100
+Digital Electronics Exercises;1;Mon;0900;Tue;2100
 Digital Electronics Practice Questions;2;Tue;2100;Thu;1300
 Digital Electronics Workshop;2;Thu;1300;Fri;2100
 Digital Electronics Workshop Revision;1;Mon;0900;Thu;1300
