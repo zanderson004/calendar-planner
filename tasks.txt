@@ -1,6 +1,6 @@
 Statistics & Numerical Methods Assignments;(1 hr);1725017400
 Statistics & Numerical Methods Extras;(1 hr);1725017400
-DSP Practice Questions;(1 hr);1724728377
+Statistics & Numerical Methods Mobius Quiz;(1 hr);1725003000
 Vector Calculus & Electromagnetics Tutorial Revision;(1 hr);1724985000
 DSP Workshop Revision;(1 hr);1724844600
 DSP Tutorial Revision;(1 hr);1724844600
@@ -9,9 +9,9 @@ DSP Practice Questions;(1 hr);1724844600
 DSP Extras;(1 hr);1724844600
 Vector Calculus & Electromagnetics Workshop Revision;(1 hr);1724985000
 Vector Calculus & Electromagnetics Extras;(1 hr);1725017400
-Digital Electronics Lecture;(2 hr);1724758200
-Digital Electronics Exercises;(1 hr);1724758200
+Statistics & Numerical Methods Practical/Workshop;(1 hr);1725003000
+Statistics & Numerical Methods Seminar;(1 hr);1724931000
 Digital Electronics Workshop Revision;(1 hr);1724902200
 Digital Electronics Extras;(1 hr);1725017400
 Vector Calculus & Electromagnetics Tutorial;(1 hr);1724844600
-Statistics & Numerical Methods Practical/Workshop;(1 hr);1725003000
+Digital Electronics Practice Questions;(2 hr);1724902200
