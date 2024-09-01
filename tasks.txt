@@ -1,6 +1,6 @@
-Statistics & Numerical Methods Assignments;(1 hr);1725017400
-Statistics & Numerical Methods Extras;(1 hr);1725017400
-Physics Lecture 2;(1 hr);1724977800
+Physics Pre Workshop;(1 hr);1725276600
+Physics Extras;(1 hr);1725276600
+Statistics & Numerical Methods Workshop Revision;(1 hr);1725449400
 Vector Calculus & Electromagnetics Tutorial Revision;(1 hr);1724985000
 DSP Workshop Revision;(1 hr);1724844600
 DSP Tutorial Revision;(1 hr);1724844600
@@ -10,11 +10,7 @@ DSP Extras;(1 hr);1724844600
 Vector Calculus & Electromagnetics Workshop Revision;(1 hr);1724985000
 Vector Calculus & Electromagnetics Extras;(1 hr);1725017400
 Statistics & Numerical Methods Practical/Workshop;(1 hr);1725003000
-Statistics & Numerical Methods Seminar;(1 hr);1724931000
+Physics Workshop Review;(1 hr);1725406200
 Digital Electronics Workshop Revision;(1 hr);1724902200
 Digital Electronics Extras;(1 hr);1725017400
-Vector Calculus & Electromagnetics Tutorial;(1 hr);1724844600
 Digital Electronics Practice Questions;(2 hr);1724902200
-Physics Extras;(1 hr);1725276600
-Physics Lecture 1;(1 hr);1724891400
-DSP Workshop 1 + Quiz;(2 hr);1724999400
