@@ -1,7 +1,7 @@
-Physics Pre Workshop;(1 hr);1725276600
-Physics Extras;(1 hr);1725276600
+Statistics & Numerical Methods Assignments;(1 hr);1725622200
+Vector Calculus & Electromagnetics Workshop 1;(2 hr);1725589800
 Statistics & Numerical Methods Workshop Revision;(1 hr);1725449400
-Statistics & Numerical Methods Practical/Workshop;(1 hr);1725607800
+DSP Tutorial;(1 hr);1725449400
 DSP Workshop Revision;(1 hr);1724844600
 Vector Calculus & Electromagnetics Tutorial;(1 hr);1725449400
 Statistics & Numerical Methods Extras;(1 hr);1725622200
