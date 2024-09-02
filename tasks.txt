@@ -1,16 +1,28 @@
 Physics Pre Workshop;(1 hr);1725276600
 Physics Extras;(1 hr);1725276600
 Statistics & Numerical Methods Workshop Revision;(1 hr);1725449400
-Vector Calculus & Electromagnetics Tutorial Revision;(1 hr);1724985000
+Statistics & Numerical Methods Practical/Workshop;(1 hr);1725607800
 DSP Workshop Revision;(1 hr);1724844600
-DSP Tutorial Revision;(1 hr);1724844600
-DSP Course Notes;(1 hr);1724844600
+Vector Calculus & Electromagnetics Tutorial;(1 hr);1725449400
+Statistics & Numerical Methods Extras;(1 hr);1725622200
 DSP Practice Questions;(1 hr);1724844600
 DSP Extras;(1 hr);1724844600
 Vector Calculus & Electromagnetics Workshop Revision;(1 hr);1724985000
-Vector Calculus & Electromagnetics Extras;(1 hr);1725017400
+Vector Calculus & Electromagnetics Tutorial Revision;(1 hr);1725589800
 Statistics & Numerical Methods Practical/Workshop;(1 hr);1725003000
 Physics Workshop Review;(1 hr);1725406200
 Digital Electronics Workshop Revision;(1 hr);1724902200
 Digital Electronics Extras;(1 hr);1725017400
 Digital Electronics Practice Questions;(2 hr);1724902200
+DSP Workshop Revision;(1 hr);1725449400
+DSP Tutorial Revision;(1 hr);1725449400
+DSP Course Notes;(1 hr);1725449400
+DSP Practice Questions;(1 hr);1725449400
+DSP Extras;(1 hr);1725449400
+Vector Calculus & Electromagnetics Workshop Revision;(1 hr);1725589800
+Vector Calculus & Electromagnetics Extras;(1 hr);1725622200
+Digital Electronics Lecture;(2 hr);1725363000
+Digital Electronics Exercises;(1 hr);1725363000
+Digital Electronics Workshop Revision;(1 hr);1725507000
+Digital Electronics Extras;(1 hr);1725622200
+Statistics & Numerical Methods Lectures + Course Notes;(1 hr);1725341400
