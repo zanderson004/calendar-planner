@@ -24,3 +24,4 @@ Vector Calculus & Electromagnetics Extras;(1 hr);1725622200
 Statistics & Numerical Methods Mobius Quiz;(1 hr);1725607800
 Digital Electronics Exercises;(1 hr);1725363000
 Digital Electronics Workshop Revision;(1 hr);1725507000
+Digital Electronics Practice Questions;(2 hr);1725507000
