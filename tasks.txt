@@ -21,6 +21,7 @@ DSP Practice Questions;(1 hr);1725449400
 DSP Extras;(1 hr);1725449400
 Vector Calculus & Electromagnetics Workshop Revision;(1 hr);1725589800
 Vector Calculus & Electromagnetics Extras;(1 hr);1725622200
-Statistics & Numerical Methods Mobius Quiz;(1 hr);1725607800
+Physics Lecture 2;(1 hr);1725582600
 Digital Electronics Exercises;(1 hr);1725363000
 Digital Electronics Workshop Revision;(1 hr);1725507000
+DSP Workshop 1 + Quiz;(2 hr);1725604200
