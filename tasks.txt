@@ -25,3 +25,7 @@ Physics Lecture 2;(1 hr);1725582600
 Digital Electronics Exercises;(1 hr);1725363000
 Digital Electronics Workshop Revision;(1 hr);1725507000
 DSP Workshop 1 + Quiz;(2 hr);1725604200
+Digital Electronics Workshop;(2 hr);1725622200
+Digital Electronics Quiz;(1 hr);1725622200
+Physics Lecture 3;(1 hr);1725622200
+Physics Pre Workshop;(1 hr);1725881400
