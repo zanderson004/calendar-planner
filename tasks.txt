@@ -9,8 +9,8 @@ Digital Electronics Workshop;(2 hr);1726227000
 DSP Tutorial;(1 hr);1726054200
 Statistics & Numerical Methods Practical/Workshop;(1 hr);1726212600
 Vector Calculus & Electromagnetics Tutorial Revision;(1 hr);1725589800
-Physics Workshop Review;(1 hr);1726011000
-Physics Workshop Review;(1 hr);1725406200
+Physics Pre Workshop;(1 hr);1726486200
+Physics Lecture 3;(1 hr);1726227000
 Physics Extras;(1 hr);1725881400
 DSP Extras;(1 hr);1725449400
 Statistics & Numerical Methods Extras;(1 hr);1726227000
