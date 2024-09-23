@@ -1,9 +1,4 @@
-DSP Workshop Revision;(1 hr);1725449400
-Vector Calculus & Electromagnetics Extras;(1 hr);1726227000
-DSP Workshop Revision;(1 hr);1726054200
-Vector Calculus & Electromagnetics Tutorial;(1 hr);1726054200
-Physics Pre Workshop;(1 hr);1726486200
-Digital Electronics Practice Questions;(2 hr);1726111800
-Digital Electronics Extras;(1 hr);1726227000
-Statistics & Numerical Methods Extras;(1 hr);1726227000
 Physics Workshop Review;(1 hr);1726615800
+Vector Calculus & Electromagnetics Extras;(1 hr);1726227000
+Digital Electronics Practice Questions;(2 hr);1726111800
+Vector Calculus & Electromagnetics Tutorial;(1 hr);1726054200
