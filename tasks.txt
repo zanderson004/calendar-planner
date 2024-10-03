@@ -1,6 +1,6 @@
 Physics Extras;(1 hr);1728300600
 Vector Calculus & Electromagnetics Tutorial Revision;(1 hr);1728009000
-Physics Lecture 1;(1 hr);1727915400
+Digital Electronics Quiz;(1 hr);1728041400
 DSP Practice Questions;(1 hr);1727868600
 Statistics & Numerical Methods Assignments;(1 hr);1728041400
 Vector Calculus & Electromagnetics Workshop Revision;(1 hr);1728009000
@@ -11,3 +11,4 @@ Digital Electronics Workshop Revision;(1 hr);1727926200
 Digital Electronics Extras;(1 hr);1728041400
 Vector Calculus & Electromagnetics Tutorial;(1 hr);1727868600
 Statistics & Numerical Methods Practical/Workshop;(1 hr);1728027000
+DSP Workshop 1 + Quiz;(2 hr);1728023400
