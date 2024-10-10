@@ -1,17 +1,19 @@
-Vector Calculus & Electromagnetics Extras;(1 hr);1728288569
-Vector Calculus & Electromagnetics Tutorial Revision;(1 hr);1728613800
+Vector Calculus & Electromagnetics Extras;(1 hr);1728442420
+Statistics & Numerical Methods Practical/Workshop;(1 hr);1728631800
 Vector Calculus & Electromagnetics Tutorial;(1 hr);1728473400
 DSP Tutorial;(1 hr);1728473400
 DSP Workshop Revision;(1 hr);1728473400
 DSP Tutorial Revision;(1 hr);1728473400
-DSP Course Notes;(1 hr);1728473400
+Statistics & Numerical Methods Assignments;(1 hr);1728646200
 DSP Practice Questions;(1 hr);1728473400
 DSP Extras;(1 hr);1728473400
 Vector Calculus & Electromagnetics Workshop Revision;(1 hr);1728613800
 Vector Calculus & Electromagnetics Extras;(1 hr);1728646200
-Digital Electronics Lecture;(2 hr);1728387000
+Physics Extras;(1 hr);1728905400
 Digital Electronics Exercises;(1 hr);1728387000
 Digital Electronics Workshop Revision;(1 hr);1728531000
 Digital Electronics Extras;(1 hr);1728646200
 Statistics & Numerical Methods Extras;(1 hr);1728646200
-Statistics & Numerical Methods Practical/Workshop;(1 hr);1728631800
+Statistics & Numerical Methods Seminar;(1 hr);1728559800
+Statistics & Numerical Methods Mobius Quiz;(1 hr);1728631800
+Digital Electronics Practice Questions;(2 hr);1728531000
