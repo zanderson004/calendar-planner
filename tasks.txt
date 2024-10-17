@@ -15,3 +15,7 @@ Statistics & Numerical Methods Assignments;(1 hr);1729251000
 Digital Electronics Exercises;(1 hr);1728991800
 Digital Electronics Workshop Revision;(1 hr);1729135800
 Digital Electronics Extras;(1 hr);1729251000
+Physics Workshop;(1 hr);1729236600
+Physics Post Workshop;(1 hr);1729236600
+Physics Lecture 2;(1 hr);1729211400
+DSP Workshop 1 + Quiz;(2 hr);1729233000
