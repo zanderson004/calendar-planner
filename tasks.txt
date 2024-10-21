@@ -1,7 +1,7 @@
 Vector Calculus & Electromagnetics Tutorial Revision;(1 hr);1729218600
 DSP Tutorial;(1 hr);1729078200
 Vector Calculus & Electromagnetics Tutorial;(1 hr);1729078200
-Statistics & Numerical Methods Extras;(1 hr);1729251000
+DSP Course Notes;(1 hr);1729683000
 Physics Extras;(1 hr);1729510200
 Statistics & Numerical Methods Extras;(1 hr);1729855800
 Statistics & Numerical Methods Practical/Workshop;(1 hr);1729841400
@@ -9,7 +9,7 @@ DSP Tutorial Revision;(1 hr);1729078200
 DSP Course Notes;(1 hr);1729078200
 DSP Practice Questions;(1 hr);1729078200
 DSP Extras;(1 hr);1729683000
-Statistics & Numerical Methods Lectures + Course Notes;(1 hr);1729575000
+DSP Tutorial;(1 hr);1729683000
 Vector Calculus & Electromagnetics Extras;(1 hr);1729251000
 Statistics & Numerical Methods Assignments;(1 hr);1729251000
 Digital Electronics Exercises;(1 hr);1728991800
@@ -28,4 +28,3 @@ Physics Workshop Review;(1 hr);1729639800
 Vector Calculus & Electromagnetics Workshop Revision;(1 hr);1729823400
 DSP Workshop Revision;(1 hr);1729683000
 DSP Tutorial Revision;(1 hr);1729683000
-DSP Course Notes;(1 hr);1729683000
