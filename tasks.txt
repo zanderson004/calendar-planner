@@ -21,7 +21,6 @@ Digital Electronics Exercises;(1 hr);1729596600
 Digital Electronics Lecture;(2 hr);1729596600
 DSP Practice Questions;(1 hr);1729683000
 Statistics & Numerical Methods Assignments;(1 hr);1729852200
-Vector Calculus & Electromagnetics Workshop 2;(1 hr);1729247400
+Physics Workshop Review;(1 hr);1729639800
 Vector Calculus & Electromagnetics Workshop Revision;(1 hr);1729823400
 Vector Calculus & Electromagnetics Extras;(1 hr);1729855800
-Physics Workshop Review;(1 hr);1729639800
